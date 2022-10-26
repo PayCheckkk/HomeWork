@@ -6,15 +6,13 @@ using DG.Tweening;
 
 public class Alarm : MonoBehaviour
 {
-    public IEnumerator IncreaseVolume(AudioSource audioSource, float interval)
+    public void IncreaseVolume(AudioSource audioSource, float interval)
     {
         audioSource.DOFade(1, interval);
-        yield return null;
     }
 
-    public IEnumerator DiscreaseVolume(AudioSource audioSource, float interval)
+    public void DiscreaseVolume(AudioSource audioSource, float interval)
     {
         audioSource.DOFade(0, interval);
-        yield return null;
     }
 }
